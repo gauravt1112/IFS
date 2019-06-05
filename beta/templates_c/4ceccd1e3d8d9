@@ -1,0 +1,11 @@
+<?php /* Smarty version 2.6.0, created on 2010-11-24 02:30:22
+         compiled from default_footer.tpl */ ?>
+<div id="footer"> <p><a href="index.php">Home</a>  | <a href="aboutus.php">About us</a> | <a href="Product_enquiry.php">Products Enquiry</a> |  <a href="contact_us.php">Contact Us</a></p>
+
+Copyright 2009 ©. All rights reserved.  <a href="#">Terms of use</a>  |  <a href="#">Privacy Policy</a><br />
+
+Powered by<a href="http://www.igloo360.com" target="_blank"> Igloo360 Technologies
+
+ 
+ 
+ </a></div>

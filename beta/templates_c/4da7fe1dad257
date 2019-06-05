@@ -1,0 +1,76 @@
+<?php /* Smarty version 2.6.0, created on 2011-04-15 03:13:17
+         compiled from sitemap.tpl */ ?>
+<div class="right" id="contact">
+    <h1><a href="index.php">Home</a> : Sitemap</h1>
+   </div>
+  <div class="left-ajent"><span class="arial12">Our Indenting Agent in India</span><br />
+      <a href="http://www.maimoonimpex.com/" target="_blank"><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+MAIMOON IMPEX LLP.jpg" alt="Maimoon Impex L.L.P." border="0" class="imgStyle" /></a> <span class="more"><a href="http://www.maimoonimpex.com/" target="_blank">Maimoon Impex L.L.P.</a></span>
+      <h2><br />
+        Contact Us    </h2>
+      <div id="basic-accordian" >
+        <div id="test-header" class="accordion_headings header_highlight">U.A.E.</div>
+        <div id="test-content">
+          <div class="accordion_child"> Post Box 17913, Jebel All Free Zone, Dubai U.A.E.<br />
+            Phone : 971788 11 557<br />
+            Fax : 9714 88 11 688.<br />
+            Email : mail@paperlink.com</div>
+        </div>
+        <div id="test1-header" class="accordion_headings">U.S.A.</div>
+        <div id="test1-content">
+          <div class="accordion_child">
+            <p>Post Box 17913, Jebel All Free Zone, Dubai U.A.E.<br />
+              Phone : 971788 11 557<br />
+              Fax : 9714 88 11 688.<br />
+              Email : mail@paperlink.com.</p>
+          </div>
+        </div>
+        <div id="test2-header" class="accordion_headings">U.K.</div>
+        <div id="test2-content">
+          <div class="accordion_child">
+            <p>Post Box 17913, Jebel All Free Zone, Dubai U.A.E.<br />
+              Phone : 971788 11 557<br />
+              Fax : 9714 88 11 688.<br />
+              Email : mail@paperlink.com</p>
+          </div>
+        </div>
+      </div>
+  </div>
+<div class="right" id="welcome">
+    <table width="60%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="5%">&nbsp;</td>
+        <td><strong><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+arrow-big.jpg" alt="" width="11" height="11" /> <a href="index.php">Home</a></strong><br />
+          <br />
+          <strong><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+arrow-big.jpg" alt="" width="11" height="11" /></strong> <strong><a href="aboutus.php">About Us</a></strong><br />
+          <br />
+          <strong><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+arrow-big.jpg" alt="" width="11" height="11" /></strong> <strong>Our Products<br />
+			<?php if (isset($this->_foreach['infoProdMenu'])) unset($this->_foreach['infoProdMenu']);
+$this->_foreach['infoProdMenu']['name'] = 'infoProdMenu';
+$this->_foreach['infoProdMenu']['total'] = count($_from = (array)$this->_tpl_vars['product']);
+$this->_foreach['infoProdMenu']['show'] = $this->_foreach['infoProdMenu']['total'] > 0;
+if ($this->_foreach['infoProdMenu']['show']):
+$this->_foreach['infoProdMenu']['iteration'] = 0;
+    foreach ($_from as $this->_tpl_vars['ProdMenu']):
+        $this->_foreach['infoProdMenu']['iteration']++;
+        $this->_foreach['infoProdMenu']['first'] = ($this->_foreach['infoProdMenu']['iteration'] == 1);
+        $this->_foreach['infoProdMenu']['last']  = ($this->_foreach['infoProdMenu']['iteration'] == $this->_foreach['infoProdMenu']['total']);
+?>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href="product.php?pid=<?php echo $this->_tpl_vars['ProdMenu']->category_id; ?>
+"><?php echo $this->_tpl_vars['ProdMenu']->category_name; ?>
+</a></strong><br />
+ <?php endforeach; unset($_from); endif; ?>
+<br />
+<strong><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+arrow-big.jpg" alt="" width="11" height="11" /></strong> <strong><a href="Product_enquiry.php">Product Enquiry</a></strong><br />
+<br />
+<strong><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+arrow-big.jpg" alt="" width="11" height="11" /></strong> <strong><a href="contact_us.php">Contact Us</a> </strong></td>
+      </tr>
+    </table>
+    <br /> 
+    <br />
+  </div>

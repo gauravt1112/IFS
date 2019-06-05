@@ -1,0 +1,44 @@
+<?php /* Smarty version 2.6.0, created on 2011-08-16 23:37:36
+         compiled from aboutus.tpl */ ?>
+<div class="right" id="contact">
+    <h1><a href="index.php">Home</a> : About Us</h1>
+   </div>
+<div class="left-ajent"><span class="arial12">Our Indenting Agent in India</span><br />
+      <a href="http://www.maimoonimpex.com/" target="_blank"><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+MAIMOON IMPEX LLP.jpg" alt="Maimoon Impex L.L.P." border="0" class="imgStyle" /></a> <span class="more"><a href="http://www.maimoonimpex.com/" target="_blank">Maimoon Impex L.L.P.</a></span>
+      <h2><br />
+        Contact Us    </h2>
+      <div id="basic-accordian" >
+        <div id="test-header" class="accordion_headings header_highlight">U.A.E.</div>
+        <div id="test-content">
+          <div class="accordion_child"> Post Box 17913, Jebel Ali Free Zone		  Dubai, U.A.E. <br />
+             Tel. : 9714 88 11 557<br />
+		Tel. : 9714 23 41 092<br />
+	    Fax : 9714 88 11 688<br />
+		Fax : 9714 23 41 093<br />
+            mail@paperlinkintl.com</div>
+        </div>
+        <div id="test1-header" class="accordion_headings">U.S.A.</div>
+        <div id="test1-content">
+          <div class="accordion_child"> 2605 Sagebrush Drive, Suite # 104, 
+            Flower Mound, TX 75028, U.S.A. <br />
+            Tel. : 972 899 3715<br />
+            Fax : 972 899 3716<br />
+            mail@paperlinkintl.com</div>
+        </div>
+        <div id="test2-header" class="accordion_headings">U.K.</div>
+        <div id="test2-content">
+          <div class="accordion_child"> Suite 404, Albany House. 324-326, Regent St., London, w1b 3hh, U.K.<br />
+            Tel. : 44 2030511672<br />
+            Fax : 44 2030511674<br />
+            mail@paperlinkintl.com</div>
+        </div>
+      </div>
+</div>
+<div class="right" id="welcome"> <strong>Paper Link International Ltd</strong>, incorporated in British Virgin Island, is in operation from Jebel Free Zone, Dubai (U.A.E.) from the year 2000. The Managing Director Mr. Saifee Jani and his team also felt the potential in diversifying into trading in waste paper. <br />
+      <br />
+    The operations of waste paper sourcing and selling started from Dubai office and gradually spread to other sourcing points such as <strong>Europe, USA, UK, African and Middle East countries.</strong><br />
+  <br />
+    In the year 2005 Paper Link International LLC was established in USA for sourcing various grades of waste paper and supplementing activities of  Paper Link International Ltd., Dubai in supplying waste paper  to Indian paper mills. At present Paper Link International supplies waste paper not only to Indian paper mill but to paper mills in <strong>Indonesia, Korea, Middle East</strong> and <strong>China</strong>, having obtained the necessary AQSIQ registration from Chinese Government. <br />
+  <br />
+</div>

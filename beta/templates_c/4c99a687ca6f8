@@ -1,0 +1,177 @@
+<?php /* Smarty version 2.6.0, created on 2010-09-22 01:47:35
+         compiled from default_both_layout.tpl */ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><?php echo $this->_tpl_vars['Site_Title']; ?>
+</title>
+<meta name="title" 			content="<?php echo $this->_tpl_vars['Meta_Title']; ?>
+">
+<meta name="description" 	content="<?php echo $this->_tpl_vars['Meta_Description']; ?>
+">
+<meta name="keywords" 		content="<?php echo $this->_tpl_vars['Meta_Keyword']; ?>
+">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+<!--
+@import url("<?php echo $this->_tpl_vars['Templates_CSS']; ?>
+main.css");
+@import url("<?php echo $this->_tpl_vars['Templates_CSS']; ?>
+contentslider.css");
+@import url("<?php echo $this->_tpl_vars['Templates_CSS']; ?>
+p7exp.css");
+-->
+</style>
+
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/IE7styles.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['Templates_CSS']; ?>
+jquerycssmenu.css" />
+<script type="text/javascript" src="<?php echo $this->_tpl_vars['Templates_JS']; ?>
+jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->_tpl_vars['Templates_JS']; ?>
+jquerycssmenu.js"></script>
+<script type="text/javascript" src="<?php echo $this->_tpl_vars['Templates_JS']; ?>
+contentslider.js">
+
+/***********************************************
+* Featured Content Slider- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+</script>
+<?php if ($this->_tpl_vars['flag']): ?>
+<script type="text/javascript" src="<?php echo $this->_tpl_vars['Templates_JS']; ?>
+accordian.pack.js"></script>
+<?php endif; ?>
+<script type="text/javascript" src="<?php echo $this->_tpl_vars['Templates_JS']; ?>
+supernote.js"></script>
+<link rel="stylesheet" href="<?php echo $this->_tpl_vars['Templates_CSS']; ?>
+prettyPhoto.css" type="text/css" media="screen" charset="utf-8"/>
+<script src="<?php echo $this->_tpl_vars['Templates_JS']; ?>
+jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<?php echo '
+<script type="text/javascript" charset="utf-8">
+		jQuery(document).ready(function($){$("a[rel^=\'prettyPhoto\']").prettyPhoto({
+				animationSpeed: \'normal\', /* fast/slow/normal */
+				padding: 30, /* padding for each side of the picture */
+				opacity: 0.40, /* Value betwee 0 and 1 */
+				showTitle: true, /* true/false */
+				allowresize: true, /* true/false */
+				counter_separator_label: \'/\', /* The separator for the gallery counter 1 "of" 2 */       			theme: \'dark_square\' /* light_rounded / dark_rounded / light_square / dark_square */
+				});
+				});
+	</script>
+	<script type="text/javascript">
+// SuperNote setup: Declare a new SuperNote object and pass the name used to
+// identify notes in the document, and a config variable hash if you want to
+// override any default settings.
+var supernote = new SuperNote(\'supernote\', {});
+// Available config options are:
+//allowNesting: true/false    // Whether to allow triggers within triggers.
+//cssProp: \'visibility\'       // CSS property used to show/hide notes and values.
+//cssVis: \'inherit\'
+//cssHid: \'hidden\'
+//IESelectBoxFix: true/false  // Enables the IFRAME select-box-covering fix.
+//showDelay: 0                // Millisecond delays.
+//hideDelay: 500
+//animInSpeed: 0.1            // Animation speeds, from 0.0 to 1.0; 1.0 disables.
+//animOutSpeed: 0.1
+// You can pass several to your "new SuperNote()" command like so:
+//{ name: value, name2: value2, name3: value3 }
+// All the script from this point on is optional!
+// Optional animation setup: passed element and 0.0-1.0 animation progress.
+// You can have as many custom animations in a note object as you want.
+function animFade(ref, counter)
+{
+ //counter = Math.min(counter, 0.9); // Uncomment to make notes translucent.
+ var f = ref.filters, done = (counter == 1);
+ if (f)
+ {
+  if (!done && ref.style.filter.indexOf("alpha") == -1)
+   ref.style.filter += \' alpha(opacity=\' + (counter * 100) + \')\';
+  else if (f.length && f.alpha) with (f.alpha)
+  {
+   if (done) enabled = false;
+   else { opacity = (counter * 100); enabled=true }
+  }
+ }
+ else ref.style.opacity = ref.style.MozOpacity = counter*0.999;
+};
+supernote.animations[supernote.animations.length] = animFade;
+// Optional custom note "close" button handler extension used in this example.
+// This picks up click on CLASS="note-close" elements within CLASS="snb-pinned"
+// notes, and closes the note when they are clicked.
+// It can be deleted if you\'re not using it.
+addEvent(document, \'click\', function(evt)
+{
+ var elm = evt.target || evt.srcElement, closeBtn, note;
+ while (elm)
+ {
+  if ((/note-close/).test(elm.className)) closeBtn = elm;
+  if ((/snb-pinned/).test(elm.className)) { note = elm; break }
+  elm = elm.parentNode;
+ }
+if (closeBtn && note)
+ {
+  var noteData = note.id.match(/([a-z_\\-0-9]+)-note-([a-z_\\-0-9]+)/i);
+  for (var i = 0; i < SuperNote.instances.length; i++)
+   if (SuperNote.instances[i].myName == noteData[1])
+   {
+    setTimeout(\'SuperNote.instances[\' + i + \'].setVis("\' + noteData[2] +
+     \'", false, true)\', 100);
+	cancelEvent(evt);
+   }
+ }
+});
+// Extending the script: you can capture mouse events on note show and hide.
+// To get a reference to a note, use \'this.notes[noteID]\' within a function.
+// It has properties like \'ref\' (the note element), \'trigRef\' (its trigger),
+// \'click\' (whether its shows on click or not), \'visible\' and \'animating\'.
+addEvent(supernote, \'show\', function(noteID)
+{
+ // Do cool stuff here!
+});
+addEvent(supernote, \'hide\', function(noteID)
+{
+ // Do cool stuff here!
+});
+// If you want draggable notes, feel free to download the "DragResize" script
+// from my website http://www.twinhelix.com -- it\'s a nice addition :).
+</script>
+'; ?>
+
+</head>
+<?php if ($this->_tpl_vars['flag']): ?>
+<body onLoad="new Accordian('basic-accordian',5,'header_highlight');">
+<?php else: ?>
+<body>
+<?php endif; ?>
+<div id="wrap">
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['T_Header']), 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<div class="clr"></div>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['T_Body']), 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<div class="clr"></div>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['T_Footer']), 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+</div>
+<div id="supernote-note-demo4" class="snp-triggeroffset notedefault"> <a name="demo4"></a>
+  <h5>ITC Limited</h5>
+  For Packaging Needs of almost all Industries such as Personal Care, Healthcare, Hygiene Products, Confectioneries, Chocolates, Cosmetics, Soaps, Cigarette,  Ice Cream Cartons, Food Trays, Paper Cups Greeting Cards, Visiting Cards, Wedding Cards, Brochures, Tags etc. etc.  Annual Capacity of Mill :  400,000 MT </div>
+ <div id="supernote-note-demo5" class="snp-triggeroffset notedefault"> <a name="demo5"></a>
+  <h5>Gayatrishakti Paper & Boards Ltd.</h5>
+ Gayatrishakti Paper & Boards Limited today produces 50000 TPY of paper board and is one of the largest units to have achieved this enviable production level in India. The product quality of our board has been widely accepted in India and overseas markets such as Malaysia, Indonesia, Iran, Sri Lanka, U.A.E., Singapore, Egypt etc.</div>
+</body>
+</html>

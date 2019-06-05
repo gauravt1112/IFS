@@ -1,0 +1,62 @@
+<?php /* Smarty version 2.6.0, created on 2010-12-31 05:28:40
+         compiled from home.tpl */ ?>
+  <p class="separator">&nbsp;</p>
+  <div class="left-ajent"><span class="arial12">Our Indenting Agent in India</span><br />
+    <a href="http://www.maimoonimpex.com/" target="_blank"><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+MAIMOON IMPEX LLP.jpg" alt="Maimoon Impex L.L.P." border="0" class="imgStyle" /></a> <span class="more"><a href="http://www.maimoonimpex.com/" target="_blank">Maimoon Impex L.L.P.</a></span></div>
+  <div class="right" id="welcome">
+    <h1><span>Welcome</span> to Paper Link International Limited!</h1>
+    We are a British Virgin Island Registered company, having main branch operations in Jebel Ali Free Zone, Dubai located at office address Jafza-5-G10. We started our operations in the year 2000.  We are now an established trading company in paper & paperboard and recovered fiber for recycling. <br />
+    <a href="aboutus.php"><span class="more"> more detail</span></a></div>
+  <div class="clr"></div>
+  <div class="divider1"></div>
+ <div class="left-ajent">
+   <h2>Contact Us</h2><div id="basic-accordian" >
+	<div id="test-header" class="accordion_headings header_highlight">U.A.E.</div>  
+	<div id="test-content">
+
+		<div class="accordion_child"> Post Box 17913, Jebel Ali Free Zone		  Dubai, U.A.E.		  <br />
+	    Tel. : 9714 88 11 557<br />
+		Tel. : 9714 23 41 092<br />
+	    Fax : 9714 88 11 688<br />
+		Fax : 9714 23 41 093<br />
+       mail@paperlinkintl.com</div>
+	</div>
+
+	<div id="test1-header" class="accordion_headings">U.S.A.</div>  
+	<div id="test1-content">
+
+		<div class="accordion_child">		  2605 Sagebrush Drive, Suite # 104, 
+      Flower Mound, TX 75028, U.S.A.	      <br />
+      Tel. : 972 899 3715<br />	      
+      Fax : 972 899 3716<br />
+      mail@paperlinkintl.com</div>
+	</div>
+	
+	<div id="test2-header" class="accordion_headings">U.K.</div>  
+	<div id="test2-content">
+	  <div class="accordion_child">		  Suite 404, Albany House. 324-326, Regent St., London, w1b 3hh, U.K.<br /> 
+      Tel. : 44 2030511672<br />		  
+      Fax : 44 2030511674<br />
+      mail@paperlinkintl.com</div>
+	</div>
+</div>
+
+
+ </div>
+ <div id="wastepaper"><h2>Waste Paper</h2>
+   <a href="product.php?pid=14"><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+waste-paper.jpg" alt="" border="0" class="imgStyle1" height="160" width="305"/></a><br />
+   <a href="product.php?pid=14"><span class="more"> more detail</span></a> </div>
+ <div id="Dealers">
+   <h2>Authorized Dealers </h2>
+     <a href="#demo4"
+class="supernote-hover-demo4"><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+itc.jpg" alt="" width="140" height="46" border="0" class="imgStyle1" /></a>    <br />
+     <a href="#demo5"
+class="supernote-hover-demo5"><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+logo-gyatri.jpg" alt="" width="120" height="50" border="0" class="imgStyle1" /></a><br /><img src="<?php echo $this->_tpl_vars['Templates_Image']; ?>
+logo-ruby.jpg" alt="" width="160" height="50" border="0" class="imgStyle1" />
+ </div>
+ 
+

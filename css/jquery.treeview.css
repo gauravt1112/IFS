@@ -1,0 +1,57 @@
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.treeview ul {
+	background-color: white;
+	margin-top: 4px;
+}
+
+.treeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover { cursor: pointer; }
+
+.treeview li { background: url(images/treeview-default-line.gif) 0 0 no-repeat; }
+.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
+
+.treeview .expandable-hitarea { background-position: -80px -3px; }
+
+.treeview li.last { background-position: 0 -1766px }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url(images/treeview-default.gif); }  
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }
+
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+
+.treeview-red li { background-image: url(images/treeview-red-line.gif); }
+.treeview-red .hitarea, .treeview-red li.lastCollapsable, .treeview-red li.lastExpandable { background-image: url(images/treeview-red.gif); } 
+
+.treeview-black li { background-image: url(images/treeview-black-line.gif); }
+.treeview-black .hitarea, .treeview-black li.lastCollapsable, .treeview-black li.lastExpandable { background-image: url(images/treeview-black.gif); }  
+
+.treeview-gray li { background-image: url(images/treeview-gray-line.gif); }
+.treeview-gray .hitarea, .treeview-gray li.lastCollapsable, .treeview-gray li.lastExpandable { background-image: url(images/treeview-gray.gif); } 
+
+.treeview-famfamfam li { background-image: url(images/treeview-famfamfam-line.gif); }
+.treeview-famfamfam .hitarea, .treeview-famfamfam li.lastCollapsable, .treeview-famfamfam li.lastExpandable { background-image: url(images/treeview-famfamfam.gif); } 
+
+.treeview .placeholder {
+	background: url(images/ajax-loader.gif) 0 0 no-repeat;
+	height: 0px;
+	width: 0px;
+	display: block;
+}
+
+.filetree li { padding: 3px 0 2px 8px; font-family:'helvetica_neue_lt_com57Cn', sans-serif; font-weight: normal; font-size: 16px; line-height: 22px; }
+.filetree li a { color: #2f1a0f;}
+.filetree span.folder, .filetree span.file { padding: 1px 0 1px 23px; display: block; }
+.filetree span.folder { background: url(../images/arrow.png) 0 0 no-repeat; }
+.filetree li.expandable span.folder { background: url(../images/arrow_closed.png) 0 0 no-repeat; }
+.filetree span.file { border-bottom: 1px dotted #b3b2b2; }

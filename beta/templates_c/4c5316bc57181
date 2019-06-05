@@ -1,0 +1,58 @@
+<?php /* Smarty version 2.6.0, created on 2010-07-30 13:15:24
+         compiled from finish_paper.tpl */ ?>
+<div class="right" id="contact">
+    <h1><a href="index.php">Home</a> : Product : <?php echo $this->_tpl_vars['product_name']; ?>
+ </h1>
+	
+        <table width="96%" border="0" align="center" cellpadding="2" cellspacing="2">
+        <tr>
+          <td align="left" valign="top">&nbsp;</td>
+          <td align="left" valign="top">&nbsp;</td>
+        </tr>
+		<?php if (isset($this->_foreach['infoCatMenu'])) unset($this->_foreach['infoCatMenu']);
+$this->_foreach['infoCatMenu']['name'] = 'infoCatMenu';
+$this->_foreach['infoCatMenu']['total'] = count($_from = (array)$this->_tpl_vars['countryInfo']);
+$this->_foreach['infoCatMenu']['show'] = $this->_foreach['infoCatMenu']['total'] > 0;
+if ($this->_foreach['infoCatMenu']['show']):
+$this->_foreach['infoCatMenu']['iteration'] = 0;
+    foreach ($_from as $this->_tpl_vars['product']):
+        $this->_foreach['infoCatMenu']['iteration']++;
+        $this->_foreach['infoCatMenu']['first'] = ($this->_foreach['infoCatMenu']['iteration'] == 1);
+        $this->_foreach['infoCatMenu']['last']  = ($this->_foreach['infoCatMenu']['iteration'] == $this->_foreach['infoCatMenu']['total']);
+?>
+        <tr>
+          <td width="2%" align="left" valign="top">&nbsp;</td>
+          <td width="94%" align="left" valign="top" class="textformatting"><h2><?php echo $this->_tpl_vars['product']['mill_name']; ?>
+, <?php echo $this->_tpl_vars['product']['country_name']; ?>
+</h2>
+		  <?php if ($this->_tpl_vars['product']['child']): ?>
+		<table width="99%" border="0" cellpadding="2" cellspacing="2">
+			<?php if (isset($this->_foreach['infoProdMenu'])) unset($this->_foreach['infoProdMenu']);
+$this->_foreach['infoProdMenu']['name'] = 'infoProdMenu';
+$this->_foreach['infoProdMenu']['total'] = count($_from = (array)$this->_tpl_vars['product']['child']);
+$this->_foreach['infoProdMenu']['show'] = $this->_foreach['infoProdMenu']['total'] > 0;
+if ($this->_foreach['infoProdMenu']['show']):
+$this->_foreach['infoProdMenu']['iteration'] = 0;
+    foreach ($_from as $this->_tpl_vars['Prod']):
+        $this->_foreach['infoProdMenu']['iteration']++;
+        $this->_foreach['infoProdMenu']['first'] = ($this->_foreach['infoProdMenu']['iteration'] == 1);
+        $this->_foreach['infoProdMenu']['last']  = ($this->_foreach['infoProdMenu']['iteration'] == $this->_foreach['infoProdMenu']['total']);
+?>
+				 <tr>
+              <td width="33%" align="left" valign="top"><img src="images/medium_74.gif" alt="" width="3" height="6" /><a href="<?php echo $this->_tpl_vars['Upload_price'];  echo $this->_tpl_vars['Prod']['product_title']; ?>
+" target="_blank"><?php echo $this->_tpl_vars['Prod']['product_name']; ?>
+ </a></td></tr>
+
+             <?php endforeach; unset($_from); endif; ?>
+			 <?php endif; ?>
+ 			</table>
+          </td>
+        </tr>
+   		 <tr>
+          <td align="left" valign="top">&nbsp;</td>
+          <td align="left" valign="top" class="divider1">&nbsp;</td>
+        </tr>
+		  <?php endforeach; unset($_from); endif; ?>
+   </table>
+ 
+  </div>

@@ -1,0 +1,73 @@
+<?php /* Smarty version 2.6.0, created on 2010-08-29 10:06:01
+         compiled from product.tpl */ ?>
+<?php require_once(SMARTY_DIR . 'core' . DIRECTORY_SEPARATOR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'assign', 'product.tpl', 12, false),)), $this); ?>
+<div class="right" id="contact">
+	<h1><a href="index.php">Home</a> : Product :<?php echo $this->_tpl_vars['product_name']; ?>
+ </h1>
+	<table width="100%" border="0" align="left" cellpadding="2" cellspacing="2">
+		<tr>
+		<?php if (isset($this->_foreach['country'])) unset($this->_foreach['country']);
+$this->_foreach['country']['name'] = 'country';
+$this->_foreach['country']['total'] = count($_from = (array)$this->_tpl_vars['countryInfo']);
+$this->_foreach['country']['show'] = $this->_foreach['country']['total'] > 0;
+if ($this->_foreach['country']['show']):
+$this->_foreach['country']['iteration'] = 0;
+    foreach ($_from as $this->_tpl_vars['country']):
+        $this->_foreach['country']['iteration']++;
+        $this->_foreach['country']['first'] = ($this->_foreach['country']['iteration'] == 1);
+        $this->_foreach['country']['last']  = ($this->_foreach['country']['iteration'] == $this->_foreach['country']['total']);
+?>
+				<td width="31%" align="left" valign="top" class="hlit">
+					<ul class="navlist"><strong><?php echo $this->_tpl_vars['country']['country_name']; ?>
+</strong>
+					<?php if ($this->_tpl_vars['country']['child']): ?>					
+						<?php if (isset($this->_foreach['ProdInfo'])) unset($this->_foreach['ProdInfo']);
+$this->_foreach['ProdInfo']['name'] = 'ProdInfo';
+$this->_foreach['ProdInfo']['total'] = count($_from = (array)$this->_tpl_vars['country']['child']);
+$this->_foreach['ProdInfo']['show'] = $this->_foreach['ProdInfo']['total'] > 0;
+if ($this->_foreach['ProdInfo']['show']):
+$this->_foreach['ProdInfo']['iteration'] = 0;
+    foreach ($_from as $this->_tpl_vars['ProdInfo']):
+        $this->_foreach['ProdInfo']['iteration']++;
+        $this->_foreach['ProdInfo']['first'] = ($this->_foreach['ProdInfo']['iteration'] == 1);
+        $this->_foreach['ProdInfo']['last']  = ($this->_foreach['ProdInfo']['iteration'] == $this->_foreach['ProdInfo']['total']);
+?>
+							<li>					
+							<?php if ($this->_tpl_vars['ProdInfo']['subchild']): ?>
+							<?php echo smarty_function_assign(array('var' => 'val','value' => 0), $this);?>
+
+								<?php if (isset($this->_foreach['Info'])) unset($this->_foreach['Info']);
+$this->_foreach['Info']['name'] = 'Info';
+$this->_foreach['Info']['total'] = count($_from = (array)$this->_tpl_vars['ProdInfo']['subchild']);
+$this->_foreach['Info']['show'] = $this->_foreach['Info']['total'] > 0;
+if ($this->_foreach['Info']['show']):
+$this->_foreach['Info']['iteration'] = 0;
+    foreach ($_from as $this->_tpl_vars['Info']):
+        $this->_foreach['Info']['iteration']++;
+        $this->_foreach['Info']['first'] = ($this->_foreach['Info']['iteration'] == 1);
+        $this->_foreach['Info']['last']  = ($this->_foreach['Info']['iteration'] == $this->_foreach['Info']['total']);
+?>
+									<a href="<?php echo $this->_tpl_vars['Upload_price'];  echo $this->_tpl_vars['Info']['product_title']; ?>
+" rel="prettyPhoto['<?php echo $this->_tpl_vars['Info']['product_name']; ?>
+']" title="<?php echo $this->_tpl_vars['Info']['product_name']; ?>
+">
+										<?php if ($this->_tpl_vars['val'] == 0): ?>
+										<?php echo smarty_function_assign(array('var' => 'val','value' => 1), $this);?>
+
+										<?php echo $this->_tpl_vars['ProdInfo']['product_name']; ?>
+
+										<?php endif; ?>
+									</a>
+								<?php endforeach; unset($_from); endif; ?>
+							<?php endif; ?>
+							</li>
+						<?php endforeach; unset($_from); endif; ?>
+					</ul>
+					<?php endif; ?>
+				</td>
+			<?php endforeach; unset($_from); endif; ?>
+		</tr>
+	</table>
+</div>
+
